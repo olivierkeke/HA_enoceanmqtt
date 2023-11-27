@@ -11,7 +11,7 @@ import yaml
 import enocean.utils
 from enoceanmqtt.communicator import Communicator
 
-from enoceanmqtt.overlays.homeassistant.device_manager import DeviceManager
+from HA_enoceanmqtt.overlays.homeassistant.device_manager import DeviceManager
 
 class HACommunicator(Communicator):
     '''Home Assistant-oriented Communicator subclass for enoceanmqtt'''
