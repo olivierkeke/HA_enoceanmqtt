@@ -21,7 +21,7 @@ def main():
     # Select the overlay
     if str(global_config.get('overlay')).lower() == "ha":
         try:
-            from enoceanmqtt.overlays.homeassistant.ha_communicator import HACommunicator
+            from HA_enoceanmqtt.overlays.homeassistant.ha_communicator import HACommunicator
         except ImportError:
             logging.error("Unable to import Home Assistant overlay")
             return
