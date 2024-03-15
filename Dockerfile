@@ -13,7 +13,6 @@ RUN apk add --no-cache git
 RUN python3 -m pip install --upgrade pip && \
     pip3 install pyyaml==6.0.1 && \
     pip3 install tinydb==4.7.1 && \
-    pip3 install paho-mqtt==1.6.1 && \
     pip3 install git+https://github.com/olivierkeke/enocean.git@debug && \
     pip3 install git+https://github.com/embyt/enocean-mqtt.git
 
