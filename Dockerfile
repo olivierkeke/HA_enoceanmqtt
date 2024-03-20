@@ -13,7 +13,7 @@ RUN apk add --no-cache git
 RUN python3 -m pip install --upgrade pip && \
     pip3 install pyyaml==6.0.1 && \
     pip3 install tinydb==4.7.1 && \
-    pip3 install git+https://github.com/olivierkeke/enocean.git@debug && \
+    pip3 install git+https://github.com/olivierkeke/enocean.git@f39462dbc38a15131656b008b593fb30ae727bdb && \
     pip3 install git+https://github.com/embyt/enocean-mqtt.git
 
 COPY HA_enoceanmqtt HA_enoceanmqtt/
