@@ -2,11 +2,19 @@ FROM python:3-alpine
 
 ARG BUILD_VERSION="head"
 
+# Copy enoceanmqtt.conf.sample to container
+RUN mkdir /config
+COPY docker/enoceanmqtt.conf.sample /config/enoceanmqtt.conf
+
 # Create config volume
 VOLUME /config
 
 # Create Working Directory
 WORKDIR /app
+
+##add timezone-support
+RUN apk add --no-cache tzdata
+ENV TZ=Europe/London
 
 # Install enoceanmqtt and requirements
 RUN apk add --no-cache git && \
