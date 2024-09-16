@@ -9,7 +9,7 @@ body:
 
         If you have a question or a feature/enhancement request, please use the [discussion panel][dp].
 
-        [dp]: https://github.com/mak-gitdev/HA_enoceanmqtt/discussions
+        [dp]: https://github.com/aseracorp/HA_enoceanmqtt/discussions
   - type: textarea
     validations:
       required: true

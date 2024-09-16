@@ -97,7 +97,7 @@ pip3 install --user --force-reinstall git+https://github.com/mak-gitdev/enocean.
 printf "\n==================================================\n"
 printf "Install enocean-mqtt\n\n"
 rm -rf enocean-mqtt
-# Quick Fix issue for issue mak-gitdev/HA_enoceanmqtt#122 (Force use of 1.6.1 as >=2.0.0 break enoceanmqtt)
+# Quick Fix issue for issue aseracorp/HA_enoceanmqtt#122 (Force use of 1.6.1 as >=2.0.0 break enoceanmqtt)
 package_install paho-mqtt==1.6.1
 git clone -b master --single-branch --depth 1 https://github.com/embyt/enocean-mqtt.git
 cd enocean-mqtt && pip3 install --user -e . && cd ..
@@ -106,7 +106,7 @@ printf "\n==================================================\n"
 printf "Install Home Assistant overlay\n\n"
 if [ ! -z "${BRANCH}" ]; then
     printf "Installing HEAD of branch %s\n" ${BRANCH}
-    git clone -b ${BRANCH} --single-branch --depth 1 https://github.com/mak-gitdev/HA_enoceanmqtt.git
+    git clone -b ${BRANCH} --single-branch --depth 1 https://github.com/aseracorp/HA_enoceanmqtt.git
     printf "Date: $(date '+%Y-%m-%d %H:%M:%S')\nBranch: ${BRANCH}\n" > HA_enoceanmqtt/enoceanmqtt/overlays/homeassistant/VERSION
     cd HA_enoceanmqtt && printf "Commit ID: $(git rev-parse --short HEAD)" >> enoceanmqtt/overlays/homeassistant/VERSION && cd ..
 else
@@ -115,7 +115,7 @@ else
     else
         printf "Installing stable version ${VERSION%-*}\n"
     fi
-    wget -nv -O "app.tar.gz" "https://github.com/mak-gitdev/HA_enoceanmqtt/archive/refs/tags/${VERSION%-*}.tar.gz" && \
+    wget -nv -O "app.tar.gz" "https://github.com/aseracorp/HA_enoceanmqtt/archive/refs/tags/${VERSION%-*}.tar.gz" && \
     printf "Extracting app.tar.gz\n" && tar xzf "app.tar.gz" && rm "app.tar.gz" && \
     mv -v "HA_enoceanmqtt-${VERSION%-*}" HA_enoceanmqtt && \
     printf "Date: $(date '+%Y-%m-%d %H:%M:%S')\nVersion: ${VERSION}\n" > HA_enoceanmqtt/enoceanmqtt/overlays/homeassistant/VERSION

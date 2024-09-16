@@ -23,7 +23,7 @@ RUN apk add --no-cache git && \
     pip3 install pyyaml==6.0.1 && \
     pip3 install tinydb==4.7.1 && \
     pip3 install paho-mqtt==1.6.1 && \
-    pip3 install git+https://github.com/mak-gitdev/enocean.git && \
+    pip3 install git+https://github.com/aseracorp/enocean.git && \
     git clone -b master --single-branch --depth 1 https://github.com/embyt/enocean-mqtt.git && \
     cd enocean-mqtt && python3 setup.py develop && cd .. && \
     if [ "${BUILD_VERSION}" = "head" ]; then \
