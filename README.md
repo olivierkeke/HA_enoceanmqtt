@@ -32,6 +32,8 @@ HA_enoceanmqtt is also available as a docker image.
 This installation will mainly suits users of Home Assistant container.  
 See [Docker Installation](https://github.com/aseracorp/HA_enoceanmqtt/wiki/Docker-Installation) for more details.
 
+If you are using Kubernetes, there is also a [Kubernetes template](https://github.com/aseracorp/HA_enoceanmqtt/wiki/Kubernetes).
+
 # Home Assistant Addon Installation
 
 HA_enoceanmqtt can also be installed as a Home Assistant addon.  
